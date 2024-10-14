@@ -1,4 +1,3 @@
-from typing import Literal
 import pytest
 
 # This is really just to get a hang on tests
@@ -28,7 +27,7 @@ class TestMath:
         (1,1,2),
         
     ])
-    def test_addition(self, tparam_a: Literal[0] | Literal[-1] | Literal[1], tparam_b: Literal[0] | Literal[1], texpected_val: Literal[0] | Literal[1] | Literal[2]):
+    def test_addition(self, tparam_a, tparam_b, texpected_val):
         assert add(tparam_a, tparam_b) == texpected_val
 
     # paramaters for testing subtraction
@@ -41,7 +40,7 @@ class TestMath:
         
     ])
 
-    def test_subtraction(self, tparam_a: Literal[0] | Literal[1] | Literal[-1] | Literal[5], tparam_b: Literal[0] | Literal[1] | Literal[-1] | Literal[10], texpected_val: Literal[0] | Literal[-5] | Literal[1]):
+    def test_subtraction(self, tparam_a, tparam_b, texpected_val):
         assert sub(tparam_a, tparam_b) == texpected_val
 
     # paramaters for testing division
@@ -54,7 +53,7 @@ class TestMath:
         
     ])
 
-    def test_division(self, tparam_a: Literal[0] | Literal[1] | Literal[4] | Literal[100], tparam_b: Literal[2] | Literal[1] | Literal[-1] | Literal[10], texpected_val: Literal[0] | Literal[1] | Literal[-1] | Literal[2] | Literal[10]):
+    def test_division(self, tparam_a, tparam_b, texpected_val):
         assert div(tparam_a, tparam_b) == texpected_val
 
 

@@ -1,4 +1,4 @@
-from game_app import *
+from graphics.game_app import *
 def main():
     gameApp(800,600)
     print("works")

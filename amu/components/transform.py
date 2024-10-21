@@ -1,5 +1,6 @@
 import pygame
 import math
+
 class Transform2D:
     def __init__(self, position=(0,0), rotation=0, scale=(1,1)): 
         self.position = pygame.Vector2(position)
@@ -14,7 +15,7 @@ class Transform2D:
         # Limit to 360 degrees(tau)
         self.rotation %= (math.tau)
 
-    def setScale(self, x, y):
+    def set_scale(self, x, y):
         assert x > 0 and y > 0, "Scale values must be greater than 0" 
         self.scale = pygame.Vector2(x,y)
     def reset(self):

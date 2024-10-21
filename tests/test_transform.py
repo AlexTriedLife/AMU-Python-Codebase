@@ -33,8 +33,8 @@ class TestTransform:
     def test_setScale(self, t_scale_x, t_scale_y, t_should_pass):
              t_transf = components.transform.Transform2D((0, 0), 0, (1, 1))
              if t_should_pass:
-                  t_transf.setScale(t_scale_x, t_scale_y)
+                  t_transf.set_scale(t_scale_x, t_scale_y)
                   assert t_transf.scale == pygame.Vector2(t_scale_x, t_scale_y)
              else:
                   with pytest.raises(AssertionError):
-                       t_transf.setScale(t_scale_x, t_scale_y)
+                       t_transf.set_scale(t_scale_x, t_scale_y)

@@ -18,8 +18,8 @@ def div(a,b):
 
 
 class TestMath:
-    # paramaters for testing addition
-    @pytest.mark.parametrize("tparam_a, tparam_b, texpected_val",[
+    # parameters for testing addition
+    @pytest.mark.parametrize("tparam_a, tparam_b, ttest_should_pass_val",[
         (0,0,0),
         (-1,1,0),
         (1,0,1),
@@ -27,11 +27,11 @@ class TestMath:
         (1,1,2),
         
     ])
-    def test_addition(self, tparam_a, tparam_b, texpected_val):
-        assert add(tparam_a, tparam_b) == texpected_val
+    def test_addition(self, tparam_a, tparam_b, ttest_should_pass_val):
+        assert add(tparam_a, tparam_b) == ttest_should_pass_val
 
     # paramaters for testing subtraction
-    @pytest.mark.parametrize("tparam_a, tparam_b, texpected_val",[
+    @pytest.mark.parametrize("tparam_a, tparam_b, ttest_should_pass_val",[
         (-0,-0,0),
         (1,1,0),
         (-1,-1,0),
@@ -40,11 +40,11 @@ class TestMath:
         
     ])
 
-    def test_subtraction(self, tparam_a, tparam_b, texpected_val):
-        assert sub(tparam_a, tparam_b) == texpected_val
+    def test_subtraction(self, tparam_a, tparam_b, ttest_should_pass_val):
+        assert sub(tparam_a, tparam_b) == ttest_should_pass_val
 
     # paramaters for testing division
-    @pytest.mark.parametrize("tparam_a, tparam_b, texpected_val",[
+    @pytest.mark.parametrize("tparam_a, tparam_b, ttest_should_pass_val",[
         (0,2,0),
         (1,1,1),
         (1,-1,-1),
@@ -53,8 +53,8 @@ class TestMath:
         
     ])
 
-    def test_division(self, tparam_a, tparam_b, texpected_val):
-        assert div(tparam_a, tparam_b) == texpected_val
+    def test_division(self, tparam_a, tparam_b, ttest_should_pass_val):
+        assert div(tparam_a, tparam_b) == ttest_should_pass_val
 
 
 

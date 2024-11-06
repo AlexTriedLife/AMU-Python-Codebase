@@ -13,7 +13,7 @@ class Transform2D:
     def rotate(self, angle):
         self.rotation += math.radians(angle)
         # Limit to 360 degrees(tau)
-        self.rotation %= (math.tau)
+        self.rotation %= math.tau
 
     def set_scale(self, x, y):
         assert x > 0 and y > 0, "Scale values must be greater than 0" 

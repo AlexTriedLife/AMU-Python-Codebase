@@ -20,7 +20,7 @@ class TestTriangle:
     )
     def test_right_angle(self,angle_a, angle_b, angle_c, test_should_pass):
         test_triangle = amu.math.triangle.Triangle([angle_a,angle_b,angle_c])
-        assert test_triangle.has_right_angle() == test_should_pass
+        assert test_triangle.right_angle == test_should_pass
     @pytest.mark.parametrize(
         "angle_a, angle_b, angle_c, test_should_pass",
         [
